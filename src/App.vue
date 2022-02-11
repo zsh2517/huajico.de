@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar />
+    <code style="font-size: xx-large; display: inline-block;">
+      <pre style="display: inline-block;">
+滑稽树上滑稽果，滑稽树下你和我。
+    滑稽用来表代码，应用场景多又多。</pre>
+    </code>
+    <CodeList></CodeList>
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CodeList from "@/components/CodeList";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+    CodeList,
+    Footer,
   }
 }
 </script>
 
 <style>
+html, body {
+  margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 40px 100px;
+  font-family: Consolas;
 }
 </style>
