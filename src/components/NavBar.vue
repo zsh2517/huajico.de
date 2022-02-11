@@ -2,8 +2,8 @@
   <div class="navbar">
     <img class="nav-flex nav-logo" src="@/assets/huaji.jpg" @click="toggleShowAll"/>
     <div class="nav-flex nav-name">
-      <span>Huaji Code(HTTP)</span>
-      <span>&nbsp;{{ state.imageCount }}/{{ state.totalCount }}</span>
+      <span>Huaji Code (HTTP)</span>
+      <span> {{ state.imageCount }}/{{ state.totalCount }}</span>
     </div>
   </div>
 </template>
