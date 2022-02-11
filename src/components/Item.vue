@@ -25,9 +25,9 @@ export default {
       type: String,
       default: 'Not found'
     },
-    available: {
-      type: Boolean,
-      default: true,
+    ext: {
+      type: String,
+      default: "",
     }
   },
   data() {
@@ -43,20 +43,17 @@ export default {
     }
   },
   mounted() {
-    if (!this.available) { // 标注了不存在
+    console.log(this.ext)
+    if (this.ext === "") { // 标注了不存在
       this.imgsrc = require('@/assets/loading.png');
       this.imgExist = false;
       return;
     }
     try { // 尝试 png，然后尝试 jpg
-      this.imgsrc = require('@/assets/code/' + this.code + '.png');
+      this.imgsrc = require('@/assets/code/' + this.code + "." + this.ext);
     } catch (e) {
-      try {
-        this.imgsrc = require('@/assets/code/' + this.code + '.jpg');
-      } catch (e) {
-        this.imgsrc = require('@/assets/loading.png');
-        this.imgExist = false;
-      }
+      this.imgsrc = require('@/assets/loading.png');
+      this.imgExist = false;
     }
   }
 }
@@ -77,7 +74,9 @@ export default {
   padding-bottom: 66.67%;
   overflow: hidden;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 
 .code-code {

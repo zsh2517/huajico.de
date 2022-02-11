@@ -4,7 +4,7 @@
       <Item
           v-for="(item, index) in code"
           :key="index"
-          class="item-item" :code="item.code" :desc="item.desc" :available="item.available"
+          class="item-item" :code="item.code" :desc="item.desc" :ext="item.ext"
       />
     </div>
   </div>
