@@ -45,13 +45,16 @@ export default {
   mounted() {
     console.log(this.ext)
     if (this.ext === "") { // 标注了不存在
+      Config.addEmpty();
       this.imgsrc = require('@/assets/loading.png');
       this.imgExist = false;
       return;
     }
-    try { // 尝试 png，然后尝试 jpg
+    try {
       this.imgsrc = require('@/assets/code/' + this.code + "." + this.ext);
+      Config.addImage();
     } catch (e) {
+      Config.addEmpty();
       this.imgsrc = require('@/assets/loading.png');
       this.imgExist = false;
     }
