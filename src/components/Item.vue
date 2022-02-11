@@ -63,8 +63,25 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 1201px) {
+  .container {
+    width: 24%;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 1200px) {
+  .container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 574px) {
+  .container {
+    width: 90%;
+  }
+}
+
 .container {
-  width: 24%;
   box-sizing: border-box;
   padding: 10px;
   height: unset;
