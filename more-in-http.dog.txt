@@ -1,0 +1,27 @@
+103 Early Hints
+205 Reset Content
+208 Already Reported
+218 This is fine
+226 IM Used
+306 Switch Proxy
+419 Page Expired
+428 Precondition Required
+430 Request Header Fields Too Large
+440 Login Time-out
+449 Retry With
+460 Client closed connection prematurely
+463 Too many forwarded IP addresses
+464 Incompatible protocol
+494 Request header too large
+495 SSL Certificate Error
+496 SSL Certificate Required
+505 HTTP Version Not Supported
+520 Web server is returning an unknown error
+522 Connection timed out
+524 A Timeout Occurred
+526 Invalid SSL certificate
+527 Railgun Listener to Origin
+529 The service is overloaded
+530 Site Frozen
+561 Unauthorized
+598 Network read timeout error
